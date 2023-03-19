@@ -1,0 +1,3 @@
+[submodule "AWSandTerraform"]
+	path = AWSandTerraform
+	url = https://github.com/grim-knight/AWSandTerraform.git
