@@ -32,5 +32,10 @@ module "ec2" {
   source           = "./modules/ec2"
   pubsub_id        = module.vpc.pubsub_id
   ec2securitygroup = module.vpc.ec2securitygroup
+}
 
+module "route53"{
+	source  = "./modules/route"
+	dns_name = module.loadbalancer.dns_name
+	zone_id = module.loadbalancer.zone_id
 }

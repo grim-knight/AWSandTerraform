@@ -6,7 +6,7 @@ resource "aws_db_instance" "dbinstance"{
 	username = var.db_name
 	password = var.db_pass
 	availability_zone = "us-east-1a"
-	publicly_accessible = false
+	publicly_accessible = true
 	db_subnet_group_name = aws_db_subnet_group.dbsubgroup.name
 	vpc_security_group_ids = [var.dbsecuritygroup]
 	skip_final_snapshot = true
