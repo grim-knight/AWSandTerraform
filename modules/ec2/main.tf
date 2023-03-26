@@ -14,9 +14,9 @@ resource "aws_instance" "wp-ec2"{
     		sudo yum install -y httpd php php-mysql mysql-server
     		sudo wget https://wordpress.org/wordpress-5.1.1.tar.gz
     		sudo tar -xzf wordpress-5.1.1.tar.gz -C /home/ec2-user/
-    		sudo rsync -avh  /var/www/html/wordpress/* /var/www/html
     		sudo chmod -R 755 /var/www/html/wp-content
     		sudo chown -R apache:apache /var/www/html/wp-content
+		sudo rsync -avh  /var/www/html/wordpress/* /var/www/html
     		sudo systemctl start httpd
     		sudo systemctl enable httpd
 		EOF
