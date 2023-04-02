@@ -1,0 +1,2 @@
+A ssm cert
+a record for the hosted zone for direct access.
